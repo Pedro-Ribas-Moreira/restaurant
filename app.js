@@ -2,11 +2,12 @@
 const btnForm = document.querySelector('#btnForm');
 const bookingForm = document.querySelector("#bookingForm");
 const closeDiv = document.querySelector("#closeDiv");
+const opacityDiv = document.querySelector('.bgOpacity');
 
 const showForm = ()=>{
     btnForm.addEventListener("click",()=>{
-        console.log("clicked")
         bookingForm.classList.toggle("showDiv");
+        opacityDiv.classList.toggle("showBg");
     })
 }
 
@@ -14,8 +15,8 @@ showForm();
 
 const hiddeForm = ()=>{
     closeDiv.addEventListener('click', ()=>{
-        console.log('clicked')
-        bookingForm.classList.toggle("showDiv")
+        bookingForm.classList.toggle("showDiv");
+        opacityDiv.classList.toggle("showBg");
     })
 }
 
